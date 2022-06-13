@@ -7,15 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class HomeActivity extends AppCompatActivity {
+public class FunctionActivity extends AppCompatActivity {
     ImageButton ib_home,ib_function,ib_temp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_function);
         findViews();
         handles();
     }
+
 
     private void findViews() {
         ib_home = (ImageButton) findViewById(R.id.ib_home);
@@ -27,7 +28,7 @@ public class HomeActivity extends AppCompatActivity {
         ib_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(HomeActivity.this,HomeActivity.class);
+                Intent intent =new Intent(FunctionActivity.this,HomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -35,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
         ib_function.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(HomeActivity.this,FunctionActivity.class);
+                Intent intent =new Intent(FunctionActivity.this,FunctionActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +44,7 @@ public class HomeActivity extends AppCompatActivity {
         ib_temp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(HomeActivity.this,TempActivity.class);
+                Intent intent =new Intent(FunctionActivity.this,TempActivity.class);
                 startActivity(intent);
             }
         });
